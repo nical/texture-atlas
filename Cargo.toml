@@ -1,0 +1,21 @@
+[package]
+name = "texture_atlas"
+version = "0.1.0"
+authors = ["Nicolas Silva <nical@fastmail.com>"]
+edition = "2018"
+
+[dependencies]
+euclid = "0.22"
+guillotiere = "0.6.0"
+svg_fmt = "0.4"
+serde = { version = "1.0", optional = true }
+
+[features]
+serialization = ["serde", "euclid/serde", "guillotiere/serialization"]
+
+[workspace]
+members = ["cli", "stats"]
+
+# Uncomment this when profiling.
+[profile.release]
+debug = true

@@ -1,0 +1,17 @@
+[package]
+name = "stats-cmd"
+version = "0.1.0"
+authors = ["Nicolas Silva <nical@fastmail.com>"]
+edition = "2018"
+workspace = ".."
+license = "MIT/Apache-2.0"
+
+[[bin]]
+name = "stats"
+path = "src/main.rs"
+
+[dependencies]
+texture_atlas = { path = "../", features = ["serialization"] }
+serde = { version = "1.0", features = ["serde_derive"] }
+ron = "0.4.2"
+clap = "2.32"
